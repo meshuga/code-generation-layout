@@ -8,6 +8,7 @@ The project uses [Standard Go Project Layout](https://github.com/golang-standard
 * OpenAPI generation with [swag](https://github.com/swaggo/swag), see `main.go`
 * Stringer with [stringer](https://pkg.go.dev/golang.org/x/tools@v0.1.12/cmd/stringer) `internal/app/example/model/model.go`
 * Interface mocking for tests with [Mockery](https://github.com/vektra/mockery), see `main_test.go`
+* SQL Query code generation with [sqlc](https://sqlc.dev/), see ``
 
 # Installing tools
 
@@ -15,6 +16,7 @@ The project uses [Standard Go Project Layout](https://github.com/golang-standard
 go install github.com/swaggo/swag/cmd/swag@latest
 go install golang.org/x/tools/cmd/stringer
 go install github.com/vektra/mockery/v2@latest
+go install github.com/kyleconroy/sqlc/cmd/sqlc@latest
 ```
 
 # Generating code
