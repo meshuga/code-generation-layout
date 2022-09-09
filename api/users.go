@@ -4,25 +4,19 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
+	"github.com/meshuga/code-generation-playground/internal/app/example/service"
 )
 
 type Api struct {
+	svc service.Service
 }
 
 // NewApi example
-func NewApi() *Api {
-	return &Api{}
+func NewApi(svc service.Service) *Api {
+	return &Api{
+		svc: svc,
+	}
 }
-
-// User example
-type User struct {
-	ID       int64
-	Email    string
-	Password string
-}
-
-// UsersCollection example
-type UsersCollection []User
 
 // Error example
 type APIError struct {
@@ -36,8 +30,9 @@ type APIError struct {
 // @Tags    admin
 // @Accept  json
 // @Produce json
-// @Success 200 {array} api.UsersCollection "ok"
+// @Success 200 {array} model.UsersCollection "ok"
 // @Router  /admin/user/ [get]
 func (a *Api) ListUsers(ctx *gin.Context) {
-	// write your code
+	users := a.svc.GetUsers()
+	ctx.JSON(200, users)
 }

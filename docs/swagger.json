@@ -38,7 +38,7 @@
                             "items": {
                                 "type": "array",
                                 "items": {
-                                    "$ref": "#/definitions/api.User"
+                                    "$ref": "#/definitions/model.UserResponse"
                                 }
                             }
                         }
@@ -48,7 +48,7 @@
         }
     },
     "definitions": {
-        "api.User": {
+        "model.UserResponse": {
             "type": "object",
             "properties": {
                 "email": {
@@ -57,8 +57,8 @@
                 "id": {
                     "type": "integer"
                 },
-                "password": {
-                    "type": "string"
+                "status": {
+                    "type": "integer"
                 }
             }
         }

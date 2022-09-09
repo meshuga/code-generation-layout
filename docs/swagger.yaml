@@ -1,13 +1,13 @@
 basePath: /api/v1
 definitions:
-  api.User:
+  model.UserResponse:
     properties:
       email:
         type: string
       id:
         type: integer
-      password:
-        type: string
+      status:
+        type: integer
     type: object
 host: localhost:8080
 info:
@@ -35,7 +35,7 @@ paths:
           schema:
             items:
               items:
-                $ref: '#/definitions/api.User'
+                $ref: '#/definitions/model.UserResponse'
               type: array
             type: array
       summary: List users from the store

@@ -45,7 +45,7 @@ const docTemplate = `{
                             "items": {
                                 "type": "array",
                                 "items": {
-                                    "$ref": "#/definitions/api.User"
+                                    "$ref": "#/definitions/model.UserResponse"
                                 }
                             }
                         }
@@ -55,7 +55,7 @@ const docTemplate = `{
         }
     },
     "definitions": {
-        "api.User": {
+        "model.UserResponse": {
             "type": "object",
             "properties": {
                 "email": {
@@ -64,8 +64,8 @@ const docTemplate = `{
                 "id": {
                     "type": "integer"
                 },
-                "password": {
-                    "type": "string"
+                "status": {
+                    "type": "integer"
                 }
             }
         }

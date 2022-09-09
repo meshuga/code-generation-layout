@@ -6,6 +6,7 @@ import (
 	ginSwagger "github.com/swaggo/gin-swagger"
 
 	"github.com/meshuga/code-generation-playground/api"
+	"github.com/meshuga/code-generation-playground/internal/app/example/service"
 )
 
 //go:generate swag init
@@ -27,16 +28,22 @@ import (
 
 // @securityDefinitions.basic BasicAuth
 func main() {
+	svc := service.NewService()
+	r := setupRouter(svc)
+	r.Run(":8080")
+}
+
+func setupRouter(svc service.Service) *gin.Engine {
 	r := gin.Default()
 
 	v1 := r.Group("/api/v1")
 	{
-		var a = api.NewApi()
+		var a = api.NewApi(svc)
 		accounts := v1.Group("/users")
 		{
 			accounts.GET("", a.ListUsers)
 		}
 	}
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
-	r.Run(":8080")
+	return r
 }
