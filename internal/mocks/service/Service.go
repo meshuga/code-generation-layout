@@ -3,7 +3,7 @@
 package mocks
 
 import (
-	model "github.com/meshuga/code-generation-playground/internal/app/example/model"
+	model "github.com/meshuga/code-generation-playground/internal/model"
 	mock "github.com/stretchr/testify/mock"
 )
 

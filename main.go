@@ -6,7 +6,7 @@ import (
 	ginSwagger "github.com/swaggo/gin-swagger"
 
 	"github.com/meshuga/code-generation-playground/api"
-	"github.com/meshuga/code-generation-playground/internal/app/example/service"
+	"github.com/meshuga/code-generation-playground/internal/service"
 )
 
 //go:generate swag init

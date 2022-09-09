@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/meshuga/code-generation-playground/internal/app/example/service"
+	"github.com/meshuga/code-generation-playground/internal/service"
 )
 
 type Api struct {

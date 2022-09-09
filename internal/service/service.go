@@ -1,6 +1,6 @@
 package service
 
-import "github.com/meshuga/code-generation-playground/internal/app/example/model"
+import "github.com/meshuga/code-generation-playground/internal/model"
 
 type Service interface {
 	GetUsers() model.UsersCollection

@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/meshuga/code-generation-playground/internal/app/example/model"
-	mocks "github.com/meshuga/code-generation-playground/internal/mocks/app/example/service"
+	mocks "github.com/meshuga/code-generation-playground/internal/mocks/service"
+	"github.com/meshuga/code-generation-playground/internal/model"
 )
 
 func TestPingRoute(t *testing.T) {
