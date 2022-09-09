@@ -5,9 +5,9 @@ The project uses [Standard Go Project Layout](https://github.com/golang-standard
 
 # Code generation samples
 
-* OpenAPI generation with [swag](https://github.com/swaggo/swag), see ``
-* Stringer with [stringer](https://pkg.go.dev/golang.org/x/tools@v0.1.12/cmd/stringer)
-* Interface mocking for tests with [Mockery](https://github.com/vektra/mockery)
+* OpenAPI generation with [swag](https://github.com/swaggo/swag), see `main.go`
+* Stringer with [stringer](https://pkg.go.dev/golang.org/x/tools@v0.1.12/cmd/stringer) `internal/app/example/model/model.go`
+* Interface mocking for tests with [Mockery](https://github.com/vektra/mockery), see `main_test.go`
 
 # Installing tools
 
