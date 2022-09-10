@@ -13,15 +13,12 @@ The project uses [Standard Go Project Layout](https://github.com/golang-standard
 # Installing tools
 
 ```shell
-go install github.com/swaggo/swag/cmd/swag@latest
-go install golang.org/x/tools/cmd/stringer
-go install github.com/vektra/mockery/v2@latest
-go install github.com/kyleconroy/sqlc/cmd/sqlc@latest
+make install_tools
 ```
 
 # Generating code
 
 Run the following code to invoke code generation:
 ```shell
-go generate ./...
+make generate
 ```
